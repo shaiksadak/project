@@ -1,0 +1,119 @@
+<html>
+<head>
+<script language="javascript">
+function validate(t1)
+{
+var a=document.f1.t1.value;
+if(a.length>=6)
+{
+for(var i=0;i<a.length;i++)
+{
+var ch=a.charAt(i);
+if(ch>=0||ch>=9)
+{
+var j=-1;
+break;
+}
+}
+if(j==-1)
+{
+alert("Enter alphabets only");
+}
+else
+{
+window.alert("name required minimum 6 charecters");
+}
+}
+}
+function validate1(p1)
+{
+var pass=document.f1.p1.value;
+if(pass.indexOf("null")!=-1)
+{
+alert("space not allowed");
+}
+if(pass.length<6)
+{
+alert("password must have min 6 in length");
+}
+}
+function validate2(t2)
+{
+var c=document.f1.t2.value;
+if(c.indexOf("@")!=-1)
+{
+if(c.indexOf(".")!=-1)
+{
+alert("invalid domain");
+}
+}
+else
+{
+alert("invalid email id");
+}
+}
+function validate3(t3)
+{
+var ba=document.f1.t3.value;
+if(ba.indexOf("null")!=-1)
+{
+alert("Space not allowed");
+}
+if(ba.length<10)
+{
+}
+if(isNaN(ba))
+{
+alert("enter digits only");
+}
+}
+</script>
+</head>
+<body bgcolor="pink"><h1><center>Registration form</center></h1>
+<form name="f1">
+Name:<input type="text" name="t1" size="20" maxlength="40"><br>
+Password:<input type="password" name="p1" size="20" maxlength="40"><br>
+Email id:<input type="text" name="t3"<br><br>
+Phone number:<input type="text" name="t2"<br><br>
+Sex:<input type="radio" name="gen" value="male"checked>Male
+<input type="radio" name="gen" value="female" checked>Female<br></br></pre>
+Date of Birth:<nobr>
+Date:<select name="a">
+<option value="1" selected>1</option>
+<option value="2" selected>2</option>
+<option value="3" selected>3</option>
+<option value="4" selected>4</option>
+<option value="5" selected>5</option>
+<option value="6" selected>6</option>
+</select>
+<nobr>
+Month:<select name="b">
+<option value="1" selected>1</option>
+<option value="2" selected>2</option>
+<option value="3" selected>3</option>
+<option value="4" selected>4</option>
+<option value="5" selected>5</option>
+</select> 
+<nobr>
+Year:<select name="c">
+<option value="1980" selected>1980</option>
+<option value="1981" selected>1981</option>
+<option value="1982" selected>1982</option>
+<option value="1983" selected>1983</option>
+<option value="1984" selected>1984</option>
+</select>
+<nobr>
+<br><br>
+<pre>
+Address:<textarea rows="5" cols="25">
+</textarea><br>
+languages known:
+<input type="checkbox" name="ch" value="telugu">Telugu<br>
+<input type="checkbox" name="ch" value="hindi">Hindi<br>
+<input type="checkbox" name="ch" value="english">English<br>
+</pre>
+<input type="submit" value="submit" onclick="validate(t1);validate1(p1);validate2(t2);validate3(t3);">
+<input type="reset" value="reset">
+</form>
+</body>
+</html>
